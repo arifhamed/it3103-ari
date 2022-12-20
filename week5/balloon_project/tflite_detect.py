@@ -103,9 +103,9 @@ def load_image(path):
     #   (1, im_height, im_width, 3)).astype(np.float32)
 
 
-img = load_image("/home/ubuntu/git/it3103/week5/balloon_project/test_samples/sample_balloon.jpeg")
-model_file = "/home/ubuntu/model.tflite"
-labels = load_labels("/home/ubuntu/labels.txt")
+img = load_image("/content/git/it3103/week5/balloon_project/test_samples/sample_balloon.jpeg")
+model_file = "/content/model.tflite"
+labels = load_labels("/content/labels.txt")
 interpreter = make_interpreter(model_file)
 interpreter.allocate_tensors()
 _, input_height, input_width, _ = interpreter.get_input_details()[0]['shape']
